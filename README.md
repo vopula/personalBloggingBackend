@@ -19,7 +19,7 @@ Notes: This deployment will not be available without MySQL activation from user
 ## Tech Stack
 
 - Backend: Node.js, Fastify, MySQL2
-- Frontend: HTMl, Tailwind CSS, Vanilla JS
+- Frontend: HTML, Tailwind CSS, Vanilla JS
 - Dev Tools: dotenv, fastify with schema validation
 
 ## API Endpoint
