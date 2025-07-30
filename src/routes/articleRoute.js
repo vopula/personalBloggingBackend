@@ -63,36 +63,6 @@ async function postRoutes (fastify, options) {
             }
         }
     }, postController.deletePost)
-
-    // fastify.put('/:id', {
-    //     schema: {
-    //         body: {
-    //             type: 'object',
-    //             required: ['title', 'content'],
-    //             properties: {
-    //                 title: {type: 'string'},
-    //                 content: {type: 'string'},
-    //             }
-    //         },
-    //         params: {
-    //             type: 'object',
-    //             properties: {
-    //                 id: {type: 'integer'}
-    //             }
-    //         }
-    //     }
-    // }, postController.updatePost);
-
-    // fastify.delete('/:id', {
-    //     schema: {
-    //         params: {
-    //             type: 'object',
-    //             properties: {
-    //             id: { type: 'integer' }
-    //             }
-    //         }
-    //     }
-    // }, postController.deletePost);
 }
 
 module.exports = postRoutes
