@@ -18,35 +18,35 @@ Notes: This deployment will not be available without MySQL activation from user
 
 ## Tech Stack
 
-Backend: Node.js, Fastify, MySQL2
-Frontend: HTMl, Tailwind CSS, Vanilla JS
-Dev Tools: dotenv, fastify with schema validation
+- Backend: Node.js, Fastify, MySQL2
+- Frontend: HTMl, Tailwind CSS, Vanilla JS
+- Dev Tools: dotenv, fastify with schema validation
 
 ## API Endpoint
 
-GET: /api/v1/post/ to get all posts
-POST: /api/v1/post/ to create new post
-PUT: /api/v1/post/:id to update post by ID
-DELETE: /api/v1/post/:id to delete post by ID
+- GET: /api/v1/post/ to get all posts
+- POST: /api/v1/post/ to create new post
+- PUT: /api/v1/post/:id to update post by ID
+- DELETE: /api/v1/post/:id to delete post by ID
 
 ## Installation
 
 ### 1. Clone the repository
-git clone https://github.com/yourusername/personalBloggingBackend.git
-cd personalBloggingBackend
+- git clone https://github.com/yourusername/personalBloggingBackend.git
+- cd personalBloggingBackend
 
 ### 2. Install dependencies
-npm install
+- npm install
 
 ### 3. Create .env file
-BACKEND_PORT=3000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=yourdbname
+- BACKEND_PORT=3000
+- DB_HOST=localhost
+- DB_USER=root
+- DB_PASSWORD=yourpassword
+- DB_NAME=yourdbname
 
 ### 4. Start the development server
-npm start
+- npm start
 
 
 👨‍💻 Author
