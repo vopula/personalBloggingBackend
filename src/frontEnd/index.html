@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fastify Blog</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-100">
+        <header class="text-center pt-8">
+            <h1 class="text-3xl font-bold text-indigo-700 drop-shadow-sm">My Blog</h1>
+            <p class="text-gray-600">Thoughts, stories, and ideas</p>
+
+            <div class="mt-6 flex justify-center space-x-4">
+                <button onclick="switchView('read', this)" class="view-btn bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition">Read</button>
+                <button onclick="switchView('post', this)" class="view-btn bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition">Post</button>
+                <button onclick="switchView('update', this)" class="view-btn bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition">Update</button>
+                <button onclick="switchView('delete', this)" class="view-btn bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition">Delete</button>
+            </div>
+        </header>
+
+        <div class="bg-white/80 backdrop-blur-sm p-6 shadow-md rounded-xl max-w-2xl mx-auto mt-10 border border-gray-200">
+            <!-- Post Section -->
+            <div id="postSection" class="sectin hidden">
+                <h2 class="text-xl font-semibold mb-4">Create New Post</h2>
+                <input id="title" type="text" placeholder="Post Title" class="w-full border border-gray-300 rounded px-3 py-2 mb-4" />
+                <textarea id="content" rows="5" placeholder="Post Content" class="w-full border border-gray-300 rounded px-3 py-2 mb-4"></textarea>
+                <button onclick="submitPost()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit</button>
+            </div>
+
+            <!-- Read Section -->
+            <div id="readSection" class="section hidden">
+                <div class="bg-white p-4 rounded shadow-md">
+                    <h2 class="text-xl font-semibold">All Posts</h2>
+                    <button onclick="fetchPost()" class="text-sm text-blue-600 hover:underline">Refresh</button>
+                </div>
+                <div id="postsContainer" class="space-y-4 text-gray-800 pt-2"></div>
+            </div>
+
+            <!-- Update Section -->
+            <div id="updateSection" class="section hidden">
+                <h2 class="text-xl font-semibold mb-4">Update Post</h2>
+                <form id="updateForm">
+                    <input type="number" id="updatePostId" placeholder="Post Id" class="w-full border rounded px-3 py-2 mb-4" required>
+                    <input type="text" id="updateTitle" placeholder="Post Title" class="w-full border rounded px-3 py-2 mb-4" required>
+                    <textarea id="updateContent" rows="5" placeholder="Post Content" class="w-full border rounded px-3 py-2 mb-4" required></textarea>
+                    <button type="submit" onclick="updatePost(event)" class="bg-blue-600 text-white px-4 py-2 rounded">Submit Changes</button>
+                </form>
+            </div>
+
+            <!-- Delete Section -->
+            <div id="deleteSection" class="section hidden">
+                <div class="bg-white/80 backdrop-blur-sm p-6 rounded-xl">
+                    <h2 class="text-xl font-semibold mb-3">Delete Post</h2>
+                    <input id="deletePostId" placeholder="Post Id" type="number" class="w-full border border-gray-300 rounded px-3 py-2 mb-4"/>
+                    <button onclick="deletePost()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="pb-10"></div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
